@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0d0f17;
+    color: #f1f5f9;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@keyframes voicePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 14px rgba(168, 85, 247, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
+  }
+}
+
+@keyframes goldenShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes diceRoll {
+  0% { transform: rotate(0deg) scale(0.9); }
+  25% { transform: rotate(90deg) scale(1.15); }
+  50% { transform: rotate(180deg) scale(0.95); }
+  75% { transform: rotate(270deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.animate-voice-pulse {
+  animation: voicePulse 1.5s infinite;
+}
+
+.animate-float {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+.animate-dice-roll {
+  animation: diceRoll 0.45s ease-out;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF3B0 0%, #FFD700 50%, #FFA500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-gradient-glow {
+  box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.35);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}

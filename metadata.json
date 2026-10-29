@@ -1,0 +1,8 @@
+{
+  "name": "Yalla Games - Voice Chat & Social Board Gaming",
+  "description": "Join live voice rooms, chat with friends, and play real-time Ludo, Dominoes, and Lucky Wheel with interactive audio effects and virtual gifting.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
